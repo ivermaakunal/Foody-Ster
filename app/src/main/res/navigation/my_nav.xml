@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/recipesFragment"
+    android:id="@+id/my_nav">
+
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.projects.trending.foodyster.ui.fragments.recipes.RecipesFragment"
+        android:label="Recipes"
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_recipesFragment_to_recipesBottomSheet"
+            app:destination="@id/recipesBottomSheet" />
+        <argument
+            android:name="backFromBottomSheet"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_recipesFragment_to_detailsActivity"
+            app:destination="@id/detailsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteRecipesFragment"
+        android:name="com.projects.trending.foodyster.ui.fragments.favourites.FavouriteRecipesFragment"
+        android:label="Favourites"
+        tools:layout="@layout/fragment_favourite_recipes" >
+        <action
+            android:id="@+id/action_favouriteRecipesFragment_to_detailsActivity"
+            app:destination="@id/detailsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodJokesFragment"
+        android:name="com.projects.trending.foodyster.ui.fragments.foodjoke.FoodJokesFragment"
+        android:label="Food Jokes"
+        tools:layout="@layout/fragment_food_jokes" />
+    <dialog
+        android:id="@+id/recipesBottomSheet"
+        android:name="com.projects.trending.foodyster.ui.fragments.recipes.RecipesBottomSheet"
+        android:label="recipes_bottom_sheet"
+        tools:layout="@layout/recipes_bottom_sheet" >
+        <action
+            android:id="@+id/action_recipesBottomSheet_to_recipesFragment"
+            app:destination="@id/recipesFragment"
+            app:popUpTo="@id/recipesFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <activity
+        android:id="@+id/detailsActivity"
+        android:name="com.projects.trending.foodyster.ui.DetailsActivity"
+        android:label="Details"
+        tools:layout="@layout/activity_details">
+        <argument
+            android:name="result"
+            app:argType="com.projects.trending.foodyster.models.Result" />
+    </activity>
+    <activity
+        android:id="@+id/splashScreen"
+        android:name="com.projects.trending.foodyster.ui.SplashScreen"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_splash_screen" />
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.projects.trending.foodyster.ui.onBoarding.viewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" />
+    <fragment
+        android:id="@+id/categoriesFragment2"
+        android:name="com.projects.trending.foodyster.ui.fragments.categories.CategoriesFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment2_to_categoriesDetailsFragment"
+            app:destination="@id/categoriesDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesDetailsFragment"
+        android:name="com.projects.trending.foodyster.ui.fragments.categories.CategoriesDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_categories_details">
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_categoriesDetailsFragment_to_detailsActivity"
+            app:destination="@id/detailsActivity" />
+    </fragment>
+</navigation>
