@@ -2,13 +2,6 @@
 
 Foodyster is a minimalistic food recipes app  📱 built to demonstrate the use of Modern Android development tools with MVVM Arvchitecture including Dependency Injection(Hilt),Flow , Retrofit , Room , Offline Caching and many more.
 
-![UI Library shield](https://img.shields.io/badge/LibraryType-UI-blue.svg)
-![Sample App shield](https://img.shields.io/badge/App-Sample-green.svg)
-![Artifact badge local, or jcenter or clonerepo](https://img.shields.io/badge/Artifact-JCenter-green.svg)
-![Minimum API Level](https://img.shields.io/badge/Min%20API%20Level-21-green)
-![Maximum API Level](https://img.shields.io/badge/Max%20API%20Level-32-orange)
-![GitHub repo size](https://img.shields.io/github/repo-size/SAMYAK99/Foodyster)
-
 ## Features 🚀
 
 - Search any Recipe of your choice
@@ -59,7 +52,4 @@ This project follows the famous MVVM architecture and best practices from Google
 
 
 ### If you liked the project don't forget to star 🌟 and fork 🍽 the project.
-![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
-![ForTheBadge ANDROID](https://forthebadge.com/images/badges/built-for-android.svg)
-![ForTheBadge GIT](https://forthebadge.com/images/badges/uses-git.svg)
 
